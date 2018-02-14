@@ -7,3 +7,4 @@ Chris Baker c_j_bake0430@csu.fullerton.edu
 
 Wonyik Cho hgeopakc@csu.fullerton.edu
 
+Hao Shi t1m3hao@csu.fullerton.edu
