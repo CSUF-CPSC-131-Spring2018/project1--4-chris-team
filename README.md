@@ -4,7 +4,6 @@ Project 1
 Group members:
 
 Chris Baker c_j_bake0430@csu.fullerton.edu
-Section 4
 
 Wonyik Cho hgeopakc@csu.fullerton.edu
 
