@@ -3,27 +3,47 @@
 #include <iostream>
 
 Student::Student() {
-	// TO BE COMPLETED
-
+//constructor
+	courseNum = 0;
+	cwid = "";
 }
 
 Student::Student(const string &cwid) {
-	// TO BE COMPLETED
-
+//Used to get access to private variable cwid
+	this -> cwid = cwid;
 }
 
 string Student::getCWID() {
-	// TO BE COMPLETED
+//Used to return cwid of the student
+	return cwid;
 }
 
 void Student::addCourseGrade (const string &courseName, char grade) {
-	// TO BE COMPLETED
-
+	this -> courseName[courseNum] = courseName;
+	this -> grade[courseNum] = grade;
+	//courseNum++ ??
 }
 
 double Student::getGPA() {
-	// TO BE COMPLETED
-
+	double value = 0.0;
+	for(int i = 0; i<courseNum; i++){
+	if(grade[i] = 'A'){
+		value = 4;
+	}
+	if(grade[i] = 'B'){
+		value = 3;
+	}
+	if(grade[i] = 'C'){
+		value = 2;
+	}
+	if(grade[i] = 'D'){
+		value = 1;
+	}
+	if(grade[i] = 'F'){
+		value = 0;
+	}
+	//FINISH THIS
+	return value/courseNum;
 }
 
 // print transcript in this (sample) format:
@@ -33,7 +53,7 @@ double Student::getGPA() {
 // CS 131		B
 // GPA = 2.6667
 void Student::printTranscript() {
-	// TO BE COMPLETED
+	
 
 }
 
