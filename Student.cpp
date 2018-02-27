@@ -4,51 +4,59 @@
 #include <iomanip>
 
 Student::Student() {
-//constructor
 	courseNum = 0;
-	cwid = "";
+	cwid = " ";
+	// TO BE COMPLETED
+
 }
 
 Student::Student(const string &cwid) {
-//Used to get access to private variable cwid
-	this -> cwid = cwid;
+	this->cwid = cwid;
+	courseNum = 0;
+	// TO BE COMPLETED
+
 }
 
 string Student::getCWID() {
-//Used to return cwid of the student
+	
 	return cwid;
+	// TO BE COMPLETED
 }
 
 void Student::addCourseGrade (const string &courseName, char grade) {
-//Used to get the courseNames and grades of the students
-	this -> courseName[courseNum] = courseName;
-	this -> grade[courseNum] = grade;
-	//add courseNum to advance to next grade
+	
+	this->courseName[courseNum] = courseName;
+	this->grade[courseNum] = grade;
 	courseNum++;
+	// TO BE COMPLETED
+
 }
 
 double Student::getGPA() {
-//Used to find gpa by grade value / number of courses
+	
 	double value = 0.0;
-	for(int i = 0; i<courseNum; i++){
-		if(grade[i] = 'A'){
+	for (int i = 0; i < courseNum; i++) {
+		if (grade[i] = 'A') {
 			value += 4;
 		}
-		if(grade[i] = 'B'){
+		else if (grade[i] = 'B') {
 			value += 3;
 		}
-		if(grade[i] = 'C'){
+		else if (grade[i] = 'C') {
 			value += 2;
 		}
-		if(grade[i] = 'D'){
+		else if (grade[i] = 'D') {
 			value += 1;
 		}
-		if(grade[i] = 'F'){
+		else if (grade[i] = 'F') {
 			value += 0;
 		}
 	}
-	//FINISH THIS
-	return value/courseNum;
+	return (double)value / courseNum;
+	
+	
+	// TO BE COMPLETED
+
 }
 
 // print transcript in this (sample) format:
@@ -58,10 +66,14 @@ double Student::getGPA() {
 // CS 131		B
 // GPA = 2.6667
 void Student::printTranscript() {
-	cout << "TRANSCRIPT FOR CWID="<< cwid;
-	for(int i = 0; i < courseNum; i++){
-		cout <<setw(10)<<left<< courseName[i] <<setw(10)<<right<< grade[i] << endl;
+	double value = 0.0;
+	cout << "TRANSCRIPT FOR CWID=" << cwid;
+	for (int i = 0; i < courseNum; i++) {
+		cout << endl << courseName[i] << "	" << grade[i];
+		value += 4 - (grade[i] - 'A');
 	}
-	cout << endl << "GPA = " << getGPA();
-}
+	cout << "GPA = " << getGPA()<<endl;
+	
+	// TO BE COMPLETED
 
+}
