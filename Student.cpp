@@ -19,6 +19,7 @@ string Student::getCWID() {
 }
 
 void Student::addCourseGrade (const string &courseName, char grade) {
+//Used to get the courseNames and grades of the students
 	this -> courseName[courseNum] = courseName;
 	this -> grade[courseNum] = grade;
 	//add courseNum to advance to next grade
@@ -26,6 +27,7 @@ void Student::addCourseGrade (const string &courseName, char grade) {
 }
 
 double Student::getGPA() {
+//Used to find gpa by grade value / number of courses
 	double value = 0.0;
 	for(int i = 0; i<courseNum; i++){
 		if(grade[i] = 'A'){
