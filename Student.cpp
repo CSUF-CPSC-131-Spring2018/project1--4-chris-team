@@ -57,7 +57,10 @@ double Student::getGPA() {
 // CS 131		B
 // GPA = 2.6667
 void Student::printTranscript() {
-	
-
+	cout << "Transcripts for CWID= << cwid << ":" ;
+	for(int i = 0; i < courseNum; i++){
+		cout << endl << courseName[i] << "		" << grade[i];
+	}
+	cout << endl << "GPA = " << getGPA();
 }
 
