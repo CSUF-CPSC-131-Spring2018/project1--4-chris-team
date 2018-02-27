@@ -13,7 +13,7 @@ public:
 	string getCWID(); // return the CWID of this student
 private:
 	string cwid;
-	string courseName[10];
-	char grade[10];
+	string courseName;
+	char grade;
 	int courseNum;
 };
