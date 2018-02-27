@@ -1,6 +1,7 @@
 #include "Student.h"
 
 #include <iostream>
+#include <iomanip>
 
 Student::Student() {
 //constructor
@@ -59,7 +60,7 @@ double Student::getGPA() {
 void Student::printTranscript() {
 	cout << "TRANSCRIPT FOR CWID="<< cwid;
 	for(int i = 0; i < courseNum; i++){
-		cout << endl << courseName[i] << "		" << grade[i];
+		cout <<setw(10)<<left<< courseName[i] <<setw(10)<<right<< grade[i] << endl;
 	}
 	cout << endl << "GPA = " << getGPA();
 }
