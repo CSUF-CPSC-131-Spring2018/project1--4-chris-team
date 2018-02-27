@@ -16,8 +16,9 @@ void Registrar::readTextfile(string filename) {
 		string courseName;
 		string cwid;
 		char grade;
+		cin >> courseName >> cwid >> grade;
 		while (myfile >> courseName >> cwid >> grade) {
-			// cout << cwid << " " << grade << endl;
+			cout << cwid << " " << grade << endl;
 			addLine(courseName, cwid, grade);
 		}
 		myfile.close();
@@ -29,6 +30,15 @@ void Registrar::readTextfile(string filename) {
 // return Student object corresponding to a given CWID
 // getStudent must throw an exception if cwid is invalid
 Student& Registrar::getStudent(string cwid) const {
+	
+	for (int i = 0; i <= 50000; i++)
+	{
+		if (ptr[i].getCWID() == cwid)
+		{
+			return ptr[i];
+		}
+	}
+	throw invalid_argument("Invalid cwid!");
 	// TO BE COMPLETED
 }
 
