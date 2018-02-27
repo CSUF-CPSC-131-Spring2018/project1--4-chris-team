@@ -12,8 +12,7 @@ public:
 	void printTranscript(); // print transcript - see Student.cpp for the format
 	string getCWID(); // return the CWID of this student
 private:
-	const string &cwid;
-	const string &courseName;
-	char grade;
+	Student * ptrGPA;
+	Student * ptrCWID;
 	
 };
